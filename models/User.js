@@ -3,18 +3,18 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //Create Schema
-const IdeaSchema = new Schema({
-    user:{
+const UserSchema = new Schema({
+    name:{
+        type: String,
+        required: true
+    },
+    email:{
+        type: String,
+        required: true
+    },
+    password:{
         type: String,
         required: true,
-    },
-    title:{
-        type: String,
-        required: true
-    },
-    details:{
-        type: String,
-        required: true
     },
     date:{
         type: Date,
@@ -22,6 +22,6 @@ const IdeaSchema = new Schema({
     }
 })
 
-mongoose.model('ideas', IdeaSchema);
+mongoose.model('users', UserSchema);
 
 
